@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modal Without JavaScript</title>
+    <style>
+        dialog {
+            display: block;
+        }
+
+        dialog:not(:target):not([open]) {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="#dialog">Open dialog</a></p>
+    <dialog id="dialog">
+        <h2>Dialog</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#">Close</a>
+    </dialog>
+</body>
+</html>
