@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JTech | Computer Technician</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Sticky transparent navbar styles */
+    .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ensure navbar covers the full viewport width */
+    margin: 0;     /* Remove any default margin */
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+    box-sizing: border-box; /* Include padding in width */
+    }
+    .navbar .logo {
+      color: #fff;
+      font-size: 1.7rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .navbar .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .navbar .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .navbar .nav-links a:hover {
+      color: #00d8ff;
+    }
+    /* Optional: add some margin to the top of the hero section */
+    .hero {
+      margin-top: 40px;
+    }
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+      .navbar .nav-links {
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <nav class="navbar">
+    <div class="logo">Jefferson F. Asejo</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="text-content">
+      <h3>HELLO I’M A</h3>
+      <h1><span>COMPUTER</span> TECHNICIAN</h1>
+      <p>Hi! My Name is Jefferson F. Asejo A Computer Enthusiast<br />From Philippines and Delighted to assist you</p>
+      <button class="learn-btn">Learn More</button>
+    </div>
+    <div class="image-container">
+      <img src="jefferson.png" alt="Jefferson holding a bottle" />
+    </div>
+  </section>
 </body>
 </html>
