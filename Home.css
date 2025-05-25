@@ -207,6 +207,36 @@ section .air.air4{
   }
 }
 
+.second-section-content {
+  display: flex;
+  width: 80vw;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.second-section-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-section-img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  z-index: 0;
+}
+
+.second-section-right {
+  flex: 1;
+  color: #fff;
+  font-family: 'Audiowide', cursive;
+}
+
 
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
@@ -222,4 +252,57 @@ section .air.air4{
 
 ::-webkit-scrollbar-thumb:hover {
   background: #bada55; /* Thumb color on hover */
+}
+
+.second-section {
+  position: relative;
+}
+
+.second-section-decor {
+  position: absolute;
+  top: -150;
+  right: 0;
+  width: 100vw;   /* Adjust size as needed */
+  height: auto;
+  z-index: 1;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 5;
+}
+
+.third-section {
+  min-height: 100vh;
+  width: 100vw;
+  background: #222; /* Or any color you like */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.third-section-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 80vw;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.third-section-col {
+  flex: 1 1 0;
+  background: rgba(255,255,255,0.05);
+  padding: 32px 24px;
+  border-radius: 16px;
+  color: #fff;
+  font-family: 'Audiowide', cursive;
+  min-width: 200px;
+}
+
+.third-section-col h3 {
+  margin-bottom: 16px;
+}
+
+.third-section-col ul {
+  list-style: disc inside;
+  padding-left: 0;
 }
