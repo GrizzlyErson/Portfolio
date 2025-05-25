@@ -206,3 +206,20 @@ section .air.air4{
     background-position-x: -1000px; 
   }
 }
+
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #343a40; /* Scrollbar track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CFE836; /* Scrollbar thumb color */
+  border-radius: 8px;
+  border: 2px solid #343a40;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bada55; /* Thumb color on hover */
+}
