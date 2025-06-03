@@ -139,11 +139,11 @@ body {
   position: absolute;
   top: 30%;
   left: 10%;
-  z-index: 20;
+  z-index: 200;
   color: #fff;
   font-family: 'Audiowide', cursive;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  pointer-events: none; /* So it doesn't block clicks */
+  pointer-events: auto;     /* <-- ADD THIS LINE */
 }
 
 .first-section-overlay h1 {
