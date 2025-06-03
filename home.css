@@ -132,7 +132,9 @@ body {
   margin-right: 0;
 }
 .social-icons a:hover {
-  transform: scale(1.2);
+  transform: scale(2);
+  transition: transform 0.2s;
+  z-index: 2;
 }
 
 .first-section-overlay {
@@ -468,31 +470,37 @@ section .air.air4{
   transition: color 0.3s;
 }
 
-/* Add at the end of your CSS file */
+/* Add or update at the end of your CSS file */
+
 .fun-animate-text span {
   display: inline-block;
   opacity: 0;
   transform: translateY(40px) scale(0.8) rotate(-10deg);
+  /* Remove animation by default */
+}
+
+.start-fun-animation.fun-animate-text span {
   animation: funTextPop 0.7s cubic-bezier(.4,0,.2,1) forwards;
 }
-.fun-animate-text span:nth-child(1) { animation-delay: 0.05s; }
-.fun-animate-text span:nth-child(2) { animation-delay: 0.10s; }
-.fun-animate-text span:nth-child(3) { animation-delay: 0.15s; }
-.fun-animate-text span:nth-child(4) { animation-delay: 0.20s; }
-.fun-animate-text span:nth-child(5) { animation-delay: 0.25s; }
-.fun-animate-text span:nth-child(6) { animation-delay: 0.30s; }
-.fun-animate-text span:nth-child(7) { animation-delay: 0.35s; }
-.fun-animate-text span:nth-child(8) { animation-delay: 0.40s; }
-.fun-animate-text span:nth-child(9) { animation-delay: 0.45s; }
-.fun-animate-text span:nth-child(10) { animation-delay: 0.50s; }
-.fun-animate-text span:nth-child(11) { animation-delay: 0.55s; }
-.fun-animate-text span:nth-child(12) { animation-delay: 0.60s; }
-.fun-animate-text span:nth-child(13) { animation-delay: 0.65s; }
-.fun-animate-text span:nth-child(14) { animation-delay: 0.70s; }
-.fun-animate-text span:nth-child(15) { animation-delay: 0.75s; }
-.fun-animate-text span:nth-child(16) { animation-delay: 0.80s; }
-.fun-animate-text span:nth-child(17) { animation-delay: 0.85s; }
-.fun-animate-text span:nth-child(18) { animation-delay: 0.90s; }
+
+.start-fun-animation.fun-animate-text span:nth-child(1) { animation-delay: 0.05s; }
+.start-fun-animation.fun-animate-text span:nth-child(2) { animation-delay: 0.10s; }
+.start-fun-animation.fun-animate-text span:nth-child(3) { animation-delay: 0.15s; }
+.start-fun-animation.fun-animate-text span:nth-child(4) { animation-delay: 0.20s; }
+.start-fun-animation.fun-animate-text span:nth-child(5) { animation-delay: 0.25s; }
+.start-fun-animation.fun-animate-text span:nth-child(6) { animation-delay: 0.30s; }
+.start-fun-animation.fun-animate-text span:nth-child(7) { animation-delay: 0.35s; }
+.start-fun-animation.fun-animate-text span:nth-child(8) { animation-delay: 0.40s; }
+.start-fun-animation.fun-animate-text span:nth-child(9) { animation-delay: 0.45s; }
+.start-fun-animation.fun-animate-text span:nth-child(10) { animation-delay: 0.50s; }
+.start-fun-animation.fun-animate-text span:nth-child(11) { animation-delay: 0.55s; }
+.start-fun-animation.fun-animate-text span:nth-child(12) { animation-delay: 0.60s; }
+.start-fun-animation.fun-animate-text span:nth-child(13) { animation-delay: 0.65s; }
+.start-fun-animation.fun-animate-text span:nth-child(14) { animation-delay: 0.70s; }
+.start-fun-animation.fun-animate-text span:nth-child(15) { animation-delay: 0.75s; }
+.start-fun-animation.fun-animate-text span:nth-child(16) { animation-delay: 0.80s; }
+.start-fun-animation.fun-animate-text span:nth-child(17) { animation-delay: 0.85s; }
+.start-fun-animation.fun-animate-text span:nth-child(18) { animation-delay: 0.90s; }
 
 @keyframes funTextPop {
   0% {
@@ -514,6 +522,10 @@ section .air.air4{
 
 .fun-animate-subtext {
   opacity: 0;
+  /* Remove animation by default */
+}
+
+.start-fun-animation.fun-animate-subtext {
   animation: funSubtextFade 1.5s 1s cubic-bezier(.4,0,.2,1) forwards;
   font-size: 1.3rem;
   margin-top: 1.5rem;
@@ -523,4 +535,16 @@ section .air.air4{
 @keyframes funSubtextFade {
   from { opacity: 0; transform: translateY(30px);}
   to   { opacity: 1; transform: translateY(0);}
+}
+
+/* Add at the end of your CSS file */
+
+.fun-animate-icon {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px) scale(0.8) rotate(-10deg);
+}
+
+.start-fun-animation.fun-animate-icon {
+  animation: funTextPop 0.7s 0.95s cubic-bezier(.4,0,.2,1) forwards;
 }
