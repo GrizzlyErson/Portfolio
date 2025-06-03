@@ -101,11 +101,11 @@ body {
 
 .circle-divider {
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 70%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
   background: rgba(255, 255, 255, 0.123); /* White with 70% opacity */
   border-radius: 50%;
   box-shadow: 0 4px 32px rgba(0,0,0,0.08);
@@ -452,4 +452,75 @@ section .air.air4{
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+/* Add at the end of your CSS file */
+.scrolled-navbar {
+  background: rgba(255, 193, 7, 0.7) !important;
+  transition: background 0.3s, backdrop-filter 0.3s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  backdrop-filter: blur(8px);
+}
+
+/* Make social icons white when navbar is scrolled */
+.scrolled-navbar .social-icons a {
+  color: #fff !important;
+  transition: color 0.3s;
+}
+
+/* Add at the end of your CSS file */
+.fun-animate-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px) scale(0.8) rotate(-10deg);
+  animation: funTextPop 0.7s cubic-bezier(.4,0,.2,1) forwards;
+}
+.fun-animate-text span:nth-child(1) { animation-delay: 0.05s; }
+.fun-animate-text span:nth-child(2) { animation-delay: 0.10s; }
+.fun-animate-text span:nth-child(3) { animation-delay: 0.15s; }
+.fun-animate-text span:nth-child(4) { animation-delay: 0.20s; }
+.fun-animate-text span:nth-child(5) { animation-delay: 0.25s; }
+.fun-animate-text span:nth-child(6) { animation-delay: 0.30s; }
+.fun-animate-text span:nth-child(7) { animation-delay: 0.35s; }
+.fun-animate-text span:nth-child(8) { animation-delay: 0.40s; }
+.fun-animate-text span:nth-child(9) { animation-delay: 0.45s; }
+.fun-animate-text span:nth-child(10) { animation-delay: 0.50s; }
+.fun-animate-text span:nth-child(11) { animation-delay: 0.55s; }
+.fun-animate-text span:nth-child(12) { animation-delay: 0.60s; }
+.fun-animate-text span:nth-child(13) { animation-delay: 0.65s; }
+.fun-animate-text span:nth-child(14) { animation-delay: 0.70s; }
+.fun-animate-text span:nth-child(15) { animation-delay: 0.75s; }
+.fun-animate-text span:nth-child(16) { animation-delay: 0.80s; }
+.fun-animate-text span:nth-child(17) { animation-delay: 0.85s; }
+.fun-animate-text span:nth-child(18) { animation-delay: 0.90s; }
+
+@keyframes funTextPop {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.8) rotate(-10deg);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.1) rotate(3deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}
+
+.fun-animate-subtext {
+  opacity: 0;
+  animation: funSubtextFade 1.5s 1s cubic-bezier(.4,0,.2,1) forwards;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  letter-spacing: 1px;
+}
+
+@keyframes funSubtextFade {
+  from { opacity: 0; transform: translateY(30px);}
+  to   { opacity: 1; transform: translateY(0);}
 }

@@ -130,8 +130,12 @@
   <!-- fourth section -->
   <section class="fourth-section d-flex align-items-center justify-content-center" style="min-height:100vh; background:#232323;">
     <div class="text-center text-white">
-      <h1>Under Development!</h1>
-      <p>Please come back soon or inform the developer.</p>
+      <h1 class="fun-animate-text">
+        <span>U</span><span>n</span><span>d</span><span>e</span><span>r</span>
+        <span>&nbsp;</span>
+        <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>m</span><span>e</span><span>n</span><span>t</span><span>!</span>
+      </h1>
+      <p class="fun-animate-subtext">Please come back soon or inform the developer.</p>
     </div>
   </section>
 
@@ -147,6 +151,18 @@
       // Prevent scrolling while modal is open
       document.body.style.overflow = 'hidden';
     }
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    const heroSection = document.querySelector('.full-vh-container');
+    window.addEventListener('scroll', function() {
+      const heroHeight = heroSection ? heroSection.offsetHeight : 400;
+      if (window.scrollY > heroHeight - 60) {
+        navbar.classList.add('scrolled-navbar');
+      } else {
+        navbar.classList.remove('scrolled-navbar');
+      }
+    });
   });
 </script>
 </body>
