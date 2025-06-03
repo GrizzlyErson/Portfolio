@@ -156,6 +156,7 @@ body {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
   font-family:'Roboto';
@@ -400,4 +401,55 @@ section .air.air4{
 .third-section-col ul {
   list-style: disc inside;
   padding-left: 0;
+}
+
+.btn.btn-warning {
+  font-family: 'Inter', Arial, Helvetica, sans-serif !important;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Modal styles */
+.dev-modal {
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 30, 30, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: modalFadeIn 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+.dev-modal-content {
+  background: #232323;
+  color: #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  text-align: center;
+  min-width: 320px;
+  max-width: 90vw;
+  transform: translateY(-40px);
+  opacity: 0;
+  animation: modalContentIn 0.7s 0.1s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
