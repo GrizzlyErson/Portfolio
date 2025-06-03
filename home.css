@@ -1,0 +1,403 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    height: auto;
+    z-index: 0;
+    scroll-behavior: smooth;
+
+}
+.custom-navbar {
+  background: rgba(255, 255, 255, 0) !important; /* Gray with 50% opacity */
+  position: sticky; /* Change from sticky to fixed */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  margin: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  backdrop-filter: blur(4px);
+}
+
+/* Change navbar link text color */
+.navbar .nav-link {
+  color: #ffffff !important; /* Change #000 to any color you want */
+  font-family: 'Audiowide', cursive !important;
+}
+
+.navbar .nav-link:hover {
+  color: #d0ff00 !important; /* Change #000 to any color you want */
+  font-family: 'Audiowide', cursive !important;
+}
+
+/* Change active link color if needed */
+.navbar .nav-link.active {
+  color: #d0ff00 !important; /* Example: orange for active link */
+}
+
+/* Change brand text color if you use text instead of logo */
+.navbar .navbar-brand {
+  color: #000 !important;
+}
+
+.full-vh-left {
+  background: #101010; /* Yellow */
+  width: 70%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.full-vh-left .picimg{
+
+  width: 95%;
+  height: 80%;
+  object-fit: cover;
+  opacity: 65%;
+
+
+}
+
+.full-vh-right {
+  background: #CFE836; /* Dark gray */
+  width: 35%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* White text for contrast */
+}
+
+.full-vh-container {
+  min-height: 100vh;
+  width: 100vw;         /* Fill the viewport width */
+  display: flex;
+  overflow: hidden;
+  margin: 0;            /* No negative margin */
+  padding: 0;           /* No negative padding */
+  position: relative;
+  margin-top: -70px;    /* Overlap navbar if needed */
+  z-index: 2;
+}
+
+.hero-wave {
+  position: absolute;
+  left: -0;
+  bottom: 0;
+  width: 100vw;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 13;
+}
+
+.hero-wave svg {
+  display: block;
+  width: 150vw;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+
+}
+
+.circle-divider {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.123); /* White with 70% opacity */
+  border-radius: 50%;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Remove the opacity property! */
+}
+
+.circle-divider .circle-img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+
+}
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+.social-icons a:last-child {
+  margin-right: 0;
+}
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.first-section-overlay {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index: 20;
+  color: #fff;
+  font-family: 'Audiowide', cursive;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  pointer-events: none; /* So it doesn't block clicks */
+}
+
+.first-section-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.first-section-overlay p {
+  font-size: 1.5rem;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  font-family:'Roboto';
+  background-color: #131417;  
+}
+p {
+  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+.container {
+  color: #e5e5e5;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iam-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.iam-label {
+  font-size: 2.2rem;
+  font-family: 'Audiowide', cursive;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.animation {
+  height: 2.5rem; /* Height of one line */
+  overflow: hidden;
+  position: relative;
+}
+
+.animation-inner {
+  display: flex;
+  flex-direction: column;
+  animation: slide-vertical 9s infinite;
+}
+
+.animation-inner > div {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
+  color: #CFE836;
+  font-family: 'Audiowide', cursive;
+}
+
+@keyframes slide-vertical {
+  0%, 15% { transform: translateY(0); }
+  25%, 40% { transform: translateY(-2.5rem); }
+  50%, 65% { transform: translateY(-5rem); }
+  75%, 90% { transform: translateY(-7.5rem); }
+  100% { transform: translateY(0); }
+}
+
+
+/* .first div {
+  background-color:#20a7d8;
+}
+.second div {
+  background-color:#CD921E;
+}
+.third div {
+  background-color:#c10528;
+} */
+
+
+
+.second-section {
+  min-height: 100vh;
+  width: 100vw;
+  background: #343a40; /* Light background, change as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+section .air{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('./img/wave.png');
+  background-size: 1000px 100px;
+  overflow:hidden;
+}
+section .air::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.7); /* Adjust alpha for more/less gray */
+  pointer-events: none;
+}
+section .air.air1{
+  animation: wave 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+section .air.air2{
+  animation: wave2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+section .air.air3{
+  animation: wave 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+section .air.air4{
+  animation: wave2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes wave{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: 1000px; 
+  }
+}
+@keyframes wave2{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: -1000px; 
+  }
+}
+
+.second-section-content {
+  display: flex;
+  width: 80vw;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.second-section-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-section-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  z-index: 0;
+}
+
+.second-section-right {
+  flex: 1;
+  color: #fff;
+  font-family: 'Audiowide', cursive;
+}
+
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #343a40; /* Scrollbar track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CFE836; /* Scrollbar thumb color */
+  border-radius: 8px;
+  border: 2px solid #343a40;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bada55; /* Thumb color on hover */
+}
+
+.second-section {
+  position: relative;
+}
+
+.second-section-decor {
+  position: absolute;
+  top: -150;
+  right: 0;
+  width: 100vw;   /* Adjust size as needed */
+  height: auto;
+  z-index: 1;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 5;
+}
+
+.third-section {
+  min-height: 100vh;
+  width: 100vw;
+  background: #222; /* Or any color you like */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.third-section-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 80vw;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: -160px;  
+}
+
+.third-section-col {
+  flex: 1 1 0;
+  background: rgba(255,255,255,0.05);
+  padding: 32px 24px;
+  border-radius: 16px;
+  color: #fff;
+  font-family: 'Audiowide', cursive;
+  min-width: 200px;
+}
+
+.third-section-col h3 {
+  margin-bottom: 16px;
+}
+
+.third-section-col ul {
+  list-style: disc inside;
+  padding-left: 0;
+}
