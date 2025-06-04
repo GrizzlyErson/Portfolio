@@ -102,27 +102,60 @@
   </section>
   <!-- third section -->
   <section class="third-section" id="resume">
-    <div class="third-section-content">
-      <div class="third-section-col">
-        <h3>Skills</h3>
-        <ul>
-          <li>Front End</li>
-          <li>Back End</li>
-          <li>HTML & CSS</li>
-          <li>JavaScript</li>
-          <li>Computer Hardware</li>
-          <li>Networking</li>
-          <li>Database Management</li>
-          <li>Python </li>
-        </ul>
-      </div>
-      <div class="third-section-col">
-        <h3>Projects</h3>
-        <ul>
-          <li>Portfolio Website</li>
-          <li>POS System</li>
-          <li>TrikeConnect</li>
-        </ul>
+    <h2 class="text-center mb-5" style="letter-spacing:2px;">Resume</h2>
+    <div class="third-section-content container pt-4 pb-0">
+      <!-- First row: Education & Experience -->
+      <div class="row">
+        <!-- Education -->
+        <div class="col-md-6 mb-4 animated-fadeup delay-1">
+          <h4 class="mb-3"><i class="fas fa-graduation-cap me-2"></i>Education</h4>
+          <div>
+            <strong>Bachelor of Science in Computer Science</strong><br>
+            <span>2022 - Present</span><br>
+            <span>Northwestern Visayan Colleges</span>
+          </div>
+          <!-- Skills (now directly under Education) -->
+          <div class="mt-4">
+            <h4 class="mb-3"><i class="fas fa-tools me-2"></i>Skills</h4>
+            <ul class="mb-0" style="list-style: none; padding-left: 0;">
+              <li><i class="fab fa-html5 me-2" style="color:#e44d26;"></i>HTML &amp; CSS</li>
+              <li><i class="fab fa-js-square me-2" style="color:#f7df1e;"></i>JavaScript</li>
+              <li><i class="fab fa-python me-2" style="color:#3776ab;"></i>Python</li>
+              <li><i class="fas fa-database me-2" style="color:#4db33d;"></i>Database Management</li>
+              <li><i class="fas fa-desktop me-2" style="color:#6c757d;"></i>Front End Development</li>
+              <li><i class="fas fa-server me-2" style="color:#7952b3;"></i>Back End Development</li>
+              <li><i class="fas fa-microchip me-2" style="color:#00bcd4;"></i>Computer Hardware</li>
+              <li><i class="fas fa-network-wired me-2" style="color:#2196f3;"></i>Networking</li>
+              <li><i class="fas fa-file-word me-2" style="color:#2b579a;"></i>Microsoft Office</li>
+              <li><i class="fab fa-php me-2" style="color:#777bb4;"></i>PHP</li>
+              <li><i class="fas fa-database me-2" style="color:#f29111;"></i>SQL</li>
+              <li><i class="fas fa-code me-2" style="color:#00599c;"></i>C++</li>
+              <li><i class="fab fa-adobe me-2" style="color:#ff0000;"></i>Adobe Photoshop</li>
+              <li><i class="fab fa-figma me-2" style="color:#a259ff;"></i>Figma</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Experience -->
+        <div class="col-md-6 mb-4 animated-fadeup delay-2">
+          <h4 class="mb-3"><i class="fas fa-briefcase me-2"></i>Experience</h4>
+          <div>
+            <strong>Computer Technician</strong><br>
+            <span>May 2025 - Present</span><br>
+            <span>Eyetech Computer and Laptop Repair Services</span>
+          </div>
+          <hr class="my-3">
+          <div>
+            <strong>Social Media Manager</strong><br>
+            <span>February 2025 - Present</span><br>
+            <span>Double D Brew Krus Na Ligas Branch</span>
+          </div>
+          <hr class="my-3">
+          <div>
+            <strong>Computer Technician</strong><br>
+            <span>2016 - 2020</span><br>
+            <span>Taralet's Computer House</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -131,15 +164,15 @@
   <section class="fourth-section d-flex align-items-center justify-content-center" style="min-height:100vh; background:#232323;">
     <div class="text-center text-white">
       <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
-        <h1 class="fun-animate-text mb-0">
+        <h1 class="fun-animate-text mb-0 animated-fadeup delay-1">
           <span>U</span><span>n</span><span>d</span><span>e</span><span>r</span>
           <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>m</span><span>e</span><span>n</span><span>t</span><span>!</span>
         </h1>
-        <span class="fun-animate-icon ms-md-3" aria-hidden="true">
+        <span class="fun-animate-icon ms-md-3 animated-fadeup delay-2" aria-hidden="true">
           <i class="fas fa-tools fa-2x" style="color:#ffc107;"></i>
         </span>
       </div>
-      <p class="fun-animate-subtext w-100 mt-3">Please come back soon or inform the developer.</p>
+      <p class="fun-animate-subtext w-100 mt-3 animated-fadeup delay-3">Please come back soon or inform the developer.</p>
     </div>
   </section>
 
@@ -226,8 +259,27 @@
     }
     window.addEventListener('scroll', animateCircleImg);
     animateCircleImg();
+
+    // Animate ALL .animated-fadeup elements on scroll (universal handler)
+    function animateAllFadeup() {
+      document.querySelectorAll('.animated-fadeup').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const triggerPoint = window.innerHeight * 0.85;
+        const inView = rect.top < triggerPoint && rect.bottom > 0;
+        const alreadyAnimated = el.classList.contains('animated-fadeup-restart');
+        if (inView && !alreadyAnimated) {
+          el.classList.remove('animated-fadeup-restart');
+          void el.offsetWidth; // force reflow
+          el.classList.add('animated-fadeup-restart');
+        } else if (!inView && alreadyAnimated) {
+          el.classList.remove('animated-fadeup-restart');
+        }
+      });
+    }
+    window.addEventListener('scroll', animateAllFadeup);
+    animateAllFadeup();
   });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-+lQ6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-+lQ6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
 </body>
 </html>
