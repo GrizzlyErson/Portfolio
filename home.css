@@ -405,11 +405,11 @@ section .air.air4{
   align-items: flex-start;
   padding-top: -160px;  
   background: #232323;
-  border-radius: 18px;
+  border-radius: 18px 18px 0 0 !important; /* Only top corners rounded */
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
   padding: 3rem 2rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0 !important;
 }
 
 .third-section-content h2 {
@@ -623,4 +623,5 @@ section .air.air4{
   border-top: none !important;
   margin-top: 0 !important;
   padding-top: 0 !important;
+  background: #232323 !important;
 }
